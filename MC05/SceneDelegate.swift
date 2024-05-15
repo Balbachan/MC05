@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds) // Faz a janela ter o espaço da tela inteira
         window?.windowScene = windowScene
-//        window?.rootViewController = MainTabBarControllerViewController() // Isso aqui é a aquela setinha
+        window?.rootViewController = ViewController() // Isso aqui é a aquela setinha
         window?.makeKeyAndVisible()
     }
 

@@ -11,7 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Notes"
         
+        
+        (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
+}
+
+#Preview {
+    return ViewController()
 }
 
