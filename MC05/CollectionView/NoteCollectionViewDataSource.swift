@@ -9,13 +9,15 @@ import UIKit
 
 class NoteCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     var noteTitle: [String]
+    var noteCard: UIColor
     
-    init(noteTitle: [String]) {
+    init(noteTitle: [String], noteCard: UIColor) {
         self.noteTitle = noteTitle
+        self.noteCard = noteCard
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return noteTitle.count
+        return noteTitle.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -23,8 +25,7 @@ class NoteCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.configTextos(title: noteTitle[indexPath.row])
-        cell.backgroundColor = .darkPurple
+        cell.configCard(title: noteTitle[indexPath.row], color: noteCard)
         
         return cell
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190C74BA2BFE86FA00215C3B /* CoreDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C74B92BFE86FA00215C3B /* CoreDataDelegate.swift */; };
 		19191BF82BF6A52000494E0B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19191BF72BF6A52000494E0B /* NotesViewController.swift */; };
 		199B80062BF3D3EE00C2B756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80052BF3D3EE00C2B756 /* AppDelegate.swift */; };
 		199B80082BF3D3EE00C2B756 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80072BF3D3EE00C2B756 /* SceneDelegate.swift */; };
@@ -19,15 +20,15 @@
 		199B803A2BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 199B80342BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf */; };
 		199B803B2BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 199B80352BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf */; };
 		19C0EFF72BF7C55600B8A92B /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFF62BF7C55600B8A92B /* NoteCollectionViewCell.swift */; };
-		19C0EFF92BF7C6F000B8A92B /* NoteCoverImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFF82BF7C6F000B8A92B /* NoteCoverImageView.swift */; };
 		19C0EFFC2BF7CC8D00B8A92B /* CapsuleFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFFB2BF7CC8D00B8A92B /* CapsuleFilterButton.swift */; };
 		19C0EFFF2BF7D1C600B8A92B /* CircleFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */; };
-		19C0F0012BFBC4E500B8A92B /* NoteUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0002BFBC4E500B8A92B /* NoteUITextView.swift */; };
 		19C0F0032BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */; };
 		19C0F0052BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */; };
+		19C0F0072BFD2F5400B8A92B /* NoteCardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0062BFD2F5400B8A92B /* NoteCardEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190C74B92BFE86FA00215C3B /* CoreDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDelegate.swift; sourceTree = "<group>"; };
 		19191BF72BF6A52000494E0B /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		199B80022BF3D3EE00C2B756 /* MC05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199B80052BF3D3EE00C2B756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,12 +43,11 @@
 		199B80342BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MADEAwelierPERSONALUSE-Medium.otf"; sourceTree = "<group>"; };
 		199B80352BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MADEAwelierPERSONALUSE-Regular.otf"; sourceTree = "<group>"; };
 		19C0EFF62BF7C55600B8A92B /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
-		19C0EFF82BF7C6F000B8A92B /* NoteCoverImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoteCoverImageView.swift; path = Cells/NoteCoverImageView.swift; sourceTree = "<group>"; };
 		19C0EFFB2BF7CC8D00B8A92B /* CapsuleFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleFilterButton.swift; sourceTree = "<group>"; };
 		19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFilterButton.swift; sourceTree = "<group>"; };
-		19C0F0002BFBC4E500B8A92B /* NoteUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITextView.swift; sourceTree = "<group>"; };
 		19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		19C0F0062BFD2F5400B8A92B /* NoteCardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCardEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190C74B82BFE86C300215C3B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				190C74B92BFE86FA00215C3B /* CoreDataDelegate.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		199B7FF92BF3D3EE00C2B756 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +94,7 @@
 				199B80092BF3D3EE00C2B756 /* ViewController.swift */,
 				19191BF72BF6A52000494E0B /* NotesViewController.swift */,
 				19C0EFF42BF7C4E300B8A92B /* CollectionView */,
+				190C74B82BFE86C300215C3B /* CoreData */,
 				19C0EFFD2BF7CC9500B8A92B /* Custom */,
 				19C0EFFA2BF7C7DF00B8A92B /* Support */,
 				199B80162BF3D3F000C2B756 /* Info.plist */,
@@ -115,9 +124,9 @@
 		19C0EFF42BF7C4E300B8A92B /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				19C0EFF82BF7C6F000B8A92B /* NoteCoverImageView.swift */,
-				19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */,
+				19C0F0062BFD2F5400B8A92B /* NoteCardEnum.swift */,
 				19C0EFF62BF7C55600B8A92B /* NoteCollectionViewCell.swift */,
+				19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */,
 				19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */,
 			);
 			path = CollectionView;
@@ -138,7 +147,6 @@
 			children = (
 				19C0EFFB2BF7CC8D00B8A92B /* CapsuleFilterButton.swift */,
 				19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */,
-				19C0F0002BFBC4E500B8A92B /* NoteUITextView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -216,19 +224,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19C0F0012BFBC4E500B8A92B /* NoteUITextView.swift in Sources */,
 				199B800A2BF3D3EE00C2B756 /* ViewController.swift in Sources */,
 				19C0F0032BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift in Sources */,
 				19C0F0052BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift in Sources */,
 				19C0EFF72BF7C55600B8A92B /* NoteCollectionViewCell.swift in Sources */,
-				19C0EFF92BF7C6F000B8A92B /* NoteCoverImageView.swift in Sources */,
 				199B80292BF525F800C2B756 /* Note+CoreDataClass.swift in Sources */,
 				19C0EFFC2BF7CC8D00B8A92B /* CapsuleFilterButton.swift in Sources */,
+				19C0F0072BFD2F5400B8A92B /* NoteCardEnum.swift in Sources */,
 				199B80062BF3D3EE00C2B756 /* AppDelegate.swift in Sources */,
 				19191BF82BF6A52000494E0B /* NotesViewController.swift in Sources */,
 				199B80102BF3D3EE00C2B756 /* MC05.xcdatamodeld in Sources */,
 				199B80082BF3D3EE00C2B756 /* SceneDelegate.swift in Sources */,
 				19C0EFFF2BF7D1C600B8A92B /* CircleFilterButton.swift in Sources */,
+				190C74BA2BFE86FA00215C3B /* CoreDataDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
