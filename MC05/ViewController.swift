@@ -12,38 +12,33 @@ class ViewController: UIViewController {
     
     // Collection View Communication
     var collectionViewDelegate: NoteCollectionViewDelegate = NoteCollectionViewDelegate()
-    var collectionViewDataSource: UICollectionViewDataSource?
+    var collectionViewDataSource: NoteCollectionViewDataSource?
     
     
     // Core Data
-    // var coreDataDelegate: CoreDataDelegate = CoreDataDelegate()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var notes:[Note]?
     
     func fetchNote() {
         do {
             self.notes = try context.fetch(Note.fetchRequest())
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            //            DispatchQueue.main.async {
+            self.collectionView.reloadData()
+            //            }
         }
         catch {
-            
+            print("Não deu reload")
         }
     }
-    
     
     
     // MARK: Calls
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dadosTitulo = ["Title", "Title", "Title"]
-        let dadosCard = UIColor.darkPink
         // Functions
         setView()
         
-        collectionViewDataSource = NoteCollectionViewDataSource(noteTitle: dadosTitulo, noteCard: dadosCard)
+        collectionViewDataSource = NoteCollectionViewDataSource(notes: notes ?? [])
         collectionView.register(NoteCollectionViewCell.self, forCellWithReuseIdentifier: NoteCollectionViewCell.identifier)
         
         setCollection()
@@ -51,9 +46,14 @@ class ViewController: UIViewController {
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
         
-        fetchNote()
+        collectionView.reloadData()
         
-        print("Laura você consegue! Estamos torcendo por você!") // ty, Paulo
+        //        print("Laura você consegue! Estamos torcendo por você!") // ty, Paulo
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        fetchNote()
+        collectionView.reloadData()
     }
     
     // MARK: Visual Creation
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         [NSAttributedString.Key.foregroundColor: UIColor.textBackground,
          NSAttributedString.Key.font: UIFont(name: "MADEAwelierPERSONALUSE-Bold", size: 34) ?? UIFont.systemFont(ofSize: 34)]
         
-        // When scrolled
+        // Title when scrolled
         navigationController?.navigationBar.titleTextAttributes =
         [NSAttributedString.Key.foregroundColor: UIColor.textBackground,
          NSAttributedString.Key.font: UIFont(name: "MADEAwelierPERSONALUSE-Bold", size: 27) ?? UIFont.systemFont(ofSize: 34)]
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         // Plus button
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(didTapButton))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(createNoteButton))
         self.navigationItem.rightBarButtonItem?.tintColor = .textBackground
         
     }
@@ -87,11 +87,9 @@ class ViewController: UIViewController {
         layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 5
         
-        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         collectionView.backgroundColor = .clear
-        
         collectionView.register(NoteCollectionViewCell.self, forCellWithReuseIdentifier: NoteCollectionViewCell.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.setCollectionViewLayout(layout, animated: true)
@@ -102,8 +100,9 @@ class ViewController: UIViewController {
     
     // MARK: Functionallity and Constrains
     func setCollection() {
-        view.addSubview(collectionView)
         
+        // Collection View
+        view.addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
@@ -112,9 +111,26 @@ class ViewController: UIViewController {
         ])
     }
     
-    
-    @objc func didTapButton() {
-        print("aaa")
+    @objc func createNoteButton() {
+        let newNote = Note(context: self.context)
+        newNote.title = "Bacana"
+        
+        do {
+            try self.context.save()
+            print("aaa")
+        } catch {
+            print("Deu ruim")
+        }
+        
+        fetchNote()
+        
+        collectionViewDataSource?.notes = notes ?? []
+        collectionView.reloadData()
+        
+        
+        let controller = NotesViewController()
+        navigationController?.pushViewController(controller, animated: true)
+        
     }
     
 }

@@ -24,7 +24,6 @@
 		19C0EFFF2BF7D1C600B8A92B /* CircleFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */; };
 		19C0F0032BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */; };
 		19C0F0052BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */; };
-		19C0F0072BFD2F5400B8A92B /* NoteCardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0062BFD2F5400B8A92B /* NoteCardEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFilterButton.swift; sourceTree = "<group>"; };
 		19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		19C0F0062BFD2F5400B8A92B /* NoteCardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCardEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +122,6 @@
 		19C0EFF42BF7C4E300B8A92B /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				19C0F0062BFD2F5400B8A92B /* NoteCardEnum.swift */,
 				19C0EFF62BF7C55600B8A92B /* NoteCollectionViewCell.swift */,
 				19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */,
 				19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */,
@@ -230,7 +227,6 @@
 				19C0EFF72BF7C55600B8A92B /* NoteCollectionViewCell.swift in Sources */,
 				199B80292BF525F800C2B756 /* Note+CoreDataClass.swift in Sources */,
 				19C0EFFC2BF7CC8D00B8A92B /* CapsuleFilterButton.swift in Sources */,
-				19C0F0072BFD2F5400B8A92B /* NoteCardEnum.swift in Sources */,
 				199B80062BF3D3EE00C2B756 /* AppDelegate.swift in Sources */,
 				19191BF82BF6A52000494E0B /* NotesViewController.swift in Sources */,
 				199B80102BF3D3EE00C2B756 /* MC05.xcdatamodeld in Sources */,

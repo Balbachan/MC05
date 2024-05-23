@@ -8,16 +8,15 @@
 import UIKit
 
 class NoteCollectionViewDataSource: NSObject, UICollectionViewDataSource {
-    var noteTitle: [String]
-    var noteCard: UIColor
     
-    init(noteTitle: [String], noteCard: UIColor) {
-        self.noteTitle = noteTitle
-        self.noteCard = noteCard
+    var notes: [Note]
+
+    init(notes: [Note]) {
+        self.notes = notes
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return noteTitle.count 
+        return notes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -25,7 +24,8 @@ class NoteCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.configCard(title: noteTitle[indexPath.row], color: noteCard)
+        let note = self.notes[indexPath.row]
+        cell.configCard(title: note.title ?? "Title", color: .lightPink)
         
         return cell
     }

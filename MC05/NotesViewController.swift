@@ -8,6 +8,18 @@
 import UIKit
 
 class NotesViewController: UIViewController {
+    let vc = ViewController()
+    
+    // MARK: Calls
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setView()
+        setUITextLabel()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        // logica de atualizar
+    }
     
     // MARK: Visual Creation
     let titleLabel: UITextField = {
@@ -55,11 +67,9 @@ class NotesViewController: UIViewController {
         let attributeText = NSMutableAttributedString(string: "Describe what is the subject", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)])
         
         subjectText.attributedText = attributeText
-//        subjectText.font = UIFont(name: "MADEAwelierPERSONALUSE-Bold", size: 17)
-        subjectText.textColor = .textBackground
         subjectText.backgroundColor = .lightPurple
         subjectText.textAlignment = .center
-        subjectText.isEditable = false
+        subjectText.isEditable = true
         subjectText.isScrollEnabled = false
         subjectText.translatesAutoresizingMaskIntoConstraints = false
         
@@ -71,45 +81,46 @@ class NotesViewController: UIViewController {
         self.view.backgroundColor = .lightPurple
     }
     
-    // MARK: Calls
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setView()
-        setUITextLabel()
-    }
-    
     // MARK: Functionallity and Constrains
     func setUITextLabel() {
+        
+        // Title
         self.view.addSubview(titleLabel)
-        titleLabel.addSubview(keywordLabel)
-        
-        self.view.addSubview(noteDivider)
-        self.view.addSubview(subjectTitle)
-        self.view.addSubview(subjectText)
-        
-        
         NSLayoutConstraint.activate([
-            // Title
             titleLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            
-            // Keyword
+            titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20)
+        ])
+        vc.title = titleLabel.text
+
+        
+        // Keyword
+        titleLabel.addSubview(keywordLabel)
+        NSLayoutConstraint.activate([
             keywordLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            
-            // Divider
+        ])
+//        newNote. = keywordLabel.text
+        
+        // Divider
+        self.view.addSubview(noteDivider)
+        NSLayoutConstraint.activate([
             noteDivider.topAnchor.constraint(equalTo: keywordLabel.bottomAnchor, constant: 70),
             noteDivider.bottomAnchor.constraint(equalTo: noteDivider.topAnchor, constant: 1),
             noteDivider.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             noteDivider.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            
-            // Subject Block
+        ])
+        
+        // Subject Block
+        self.view.addSubview(subjectTitle)
+        NSLayoutConstraint.activate([
             subjectTitle.topAnchor.constraint(equalTo: noteDivider.bottomAnchor, constant: 40),
             subjectTitle.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            
+        ])
+        
+        self.view.addSubview(subjectText)
+        NSLayoutConstraint.activate([
             subjectText.topAnchor.constraint(equalTo: subjectTitle.bottomAnchor, constant: 5),
             subjectText.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            
         ])
     }
 }
