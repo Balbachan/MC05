@@ -8,7 +8,6 @@
 import UIKit
 
 class NoteCollectionViewDataSource: NSObject, UICollectionViewDataSource {
-    
     var notes: [Note]
 
     init(notes: [Note]) {

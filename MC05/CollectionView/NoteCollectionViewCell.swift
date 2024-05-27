@@ -29,7 +29,6 @@ class NoteCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         self.title.text = nil
         self.card.backgroundColor = nil
     }

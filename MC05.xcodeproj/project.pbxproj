@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		190C74BA2BFE86FA00215C3B /* CoreDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C74B92BFE86FA00215C3B /* CoreDataDelegate.swift */; };
 		19191BF82BF6A52000494E0B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19191BF72BF6A52000494E0B /* NotesViewController.swift */; };
 		199B80062BF3D3EE00C2B756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80052BF3D3EE00C2B756 /* AppDelegate.swift */; };
 		199B80082BF3D3EE00C2B756 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80072BF3D3EE00C2B756 /* SceneDelegate.swift */; };
@@ -27,7 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		190C74B92BFE86FA00215C3B /* CoreDataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDelegate.swift; sourceTree = "<group>"; };
 		19191BF72BF6A52000494E0B /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		199B80022BF3D3EE00C2B756 /* MC05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199B80052BF3D3EE00C2B756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,14 +57,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		190C74B82BFE86C300215C3B /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				190C74B92BFE86FA00215C3B /* CoreDataDelegate.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		199B7FF92BF3D3EE00C2B756 = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +82,6 @@
 				199B80092BF3D3EE00C2B756 /* ViewController.swift */,
 				19191BF72BF6A52000494E0B /* NotesViewController.swift */,
 				19C0EFF42BF7C4E300B8A92B /* CollectionView */,
-				190C74B82BFE86C300215C3B /* CoreData */,
 				19C0EFFD2BF7CC9500B8A92B /* Custom */,
 				19C0EFFA2BF7C7DF00B8A92B /* Support */,
 				199B80162BF3D3F000C2B756 /* Info.plist */,
@@ -232,7 +221,6 @@
 				199B80102BF3D3EE00C2B756 /* MC05.xcdatamodeld in Sources */,
 				199B80082BF3D3EE00C2B756 /* SceneDelegate.swift in Sources */,
 				19C0EFFF2BF7D1C600B8A92B /* CircleFilterButton.swift in Sources */,
-				190C74BA2BFE86FA00215C3B /* CoreDataDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

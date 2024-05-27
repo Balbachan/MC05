@@ -10,8 +10,11 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    // Collection View Communication
-    var collectionViewDelegate: NoteCollectionViewDelegate = NoteCollectionViewDelegate()
+//    // Collection View Communication
+//    var collectionViewDelegate: NoteCollectionViewDelegate = NoteCollectionViewDelegate()
+//    var collectionViewDataSource: NoteCollectionViewDataSource?
+    
+    var collectionViewDelegate: NoteCollectionViewDelegate?
     var collectionViewDataSource: NoteCollectionViewDataSource?
     
     
@@ -37,6 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Functions
         setView()
+        fetchNote()
         
         collectionViewDataSource = NoteCollectionViewDataSource(notes: notes ?? [])
         collectionView.register(NoteCollectionViewCell.self, forCellWithReuseIdentifier: NoteCollectionViewCell.identifier)
@@ -44,6 +48,8 @@ class ViewController: UIViewController {
         setCollection()
         
         collectionView.dataSource = collectionViewDataSource
+//        collectionViewDelegate.navigationController = self.navigationController
+        collectionViewDelegate = NoteCollectionViewDelegate(notes: notes ?? [], context: context, navigationController: self.navigationController)
         collectionView.delegate = collectionViewDelegate
         
         collectionView.reloadData()
@@ -52,8 +58,24 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
 //        fetchNote()
-        collectionView.reloadData()
+//        collectionView.reloadData()
+        
+            super.viewDidLoad()
+            // Function
+            fetchNote()
+            
+            
+            collectionView.dataSource = collectionViewDataSource
+    //        collectionViewDelegate.navigationController = self.navigationController
+            collectionViewDelegate = NoteCollectionViewDelegate(notes: notes ?? [], context: context, navigationController: self.navigationController)
+            collectionView.delegate = collectionViewDelegate
+            
+            collectionView.reloadData()
+            
+            //        print("Laura você consegue! Estamos torcendo por você!") // ty, Paulo
+        
     }
     
     // MARK: Visual Creation
@@ -73,10 +95,12 @@ class ViewController: UIViewController {
          NSAttributedString.Key.font: UIFont(name: "MADEAwelierPERSONALUSE-Bold", size: 27) ?? UIFont.systemFont(ofSize: 34)]
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.tintColor = .textBackground
         
         // Plus button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(createNoteButton))
         self.navigationItem.rightBarButtonItem?.tintColor = .textBackground
+        navigationItem.backBarButtonItem?.tintColor = .textBackground
         
     }
     
@@ -113,13 +137,12 @@ class ViewController: UIViewController {
     
     @objc func createNoteButton() {
         let newNote = Note(context: self.context)
-        newNote.title = "Bacana"
         
         do {
             try self.context.save()
-            print("aaa")
+            print("Criou uma nova nota no CoreDate")
         } catch {
-            print("Deu ruim")
+            print("Não criou uma nova nota no CoreData")
         }
         
         fetchNote()
@@ -127,8 +150,11 @@ class ViewController: UIViewController {
         collectionViewDataSource?.notes = notes ?? []
         collectionView.reloadData()
         
+        newNote.title = "Subject Title"
+        newNote.keyword = "Write here about what you've learned..."
+    
         
-        let controller = NotesViewController()
+        let controller = NotesViewController(note: newNote, context: self.context)
         navigationController?.pushViewController(controller, animated: true)
         
     }
