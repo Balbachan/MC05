@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19191BF82BF6A52000494E0B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19191BF72BF6A52000494E0B /* NotesViewController.swift */; };
 		199B80062BF3D3EE00C2B756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80052BF3D3EE00C2B756 /* AppDelegate.swift */; };
 		199B80082BF3D3EE00C2B756 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80072BF3D3EE00C2B756 /* SceneDelegate.swift */; };
 		199B800A2BF3D3EE00C2B756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80092BF3D3EE00C2B756 /* ViewController.swift */; };
 		199B80102BF3D3EE00C2B756 /* MC05.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 199B800E2BF3D3EE00C2B756 /* MC05.xcdatamodeld */; };
 		199B80122BF3D3F000C2B756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199B80112BF3D3F000C2B756 /* Assets.xcassets */; };
 		199B80152BF3D3F000C2B756 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 199B80142BF3D3F000C2B756 /* Base */; };
+		199B80292BF525F800C2B756 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B80272BF525F800C2B756 /* Note+CoreDataClass.swift */; };
+		199B80382BF544B000C2B756 /* MADEAwelierPERSONALUSE-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 199B80322BF544B000C2B756 /* MADEAwelierPERSONALUSE-Bold.otf */; };
+		199B803A2BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 199B80342BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf */; };
+		199B803B2BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 199B80352BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf */; };
+		19C0EFF72BF7C55600B8A92B /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFF62BF7C55600B8A92B /* NoteCollectionViewCell.swift */; };
+		19C0EFFC2BF7CC8D00B8A92B /* CapsuleFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFFB2BF7CC8D00B8A92B /* CapsuleFilterButton.swift */; };
+		19C0EFFF2BF7D1C600B8A92B /* CircleFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */; };
+		19C0F0032BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */; };
+		19C0F0052BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19191BF72BF6A52000494E0B /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		199B80022BF3D3EE00C2B756 /* MC05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199B80052BF3D3EE00C2B756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199B80072BF3D3EE00C2B756 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,15 @@
 		199B80112BF3D3F000C2B756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		199B80142BF3D3F000C2B756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199B80162BF3D3F000C2B756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		199B80272BF525F800C2B756 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		199B80322BF544B000C2B756 /* MADEAwelierPERSONALUSE-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MADEAwelierPERSONALUSE-Bold.otf"; sourceTree = "<group>"; };
+		199B80342BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MADEAwelierPERSONALUSE-Medium.otf"; sourceTree = "<group>"; };
+		199B80352BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MADEAwelierPERSONALUSE-Regular.otf"; sourceTree = "<group>"; };
+		19C0EFF62BF7C55600B8A92B /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		19C0EFFB2BF7CC8D00B8A92B /* CapsuleFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleFilterButton.swift; sourceTree = "<group>"; };
+		19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFilterButton.swift; sourceTree = "<group>"; };
+		19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,65 @@
 		199B80042BF3D3EE00C2B756 /* MC05 */ = {
 			isa = PBXGroup;
 			children = (
+				199B802B2BF525FE00C2B756 /* Model */,
 				199B80052BF3D3EE00C2B756 /* AppDelegate.swift */,
 				199B80072BF3D3EE00C2B756 /* SceneDelegate.swift */,
 				199B80092BF3D3EE00C2B756 /* ViewController.swift */,
-				199B80112BF3D3F000C2B756 /* Assets.xcassets */,
-				199B80132BF3D3F000C2B756 /* LaunchScreen.storyboard */,
+				19191BF72BF6A52000494E0B /* NotesViewController.swift */,
+				19C0EFF42BF7C4E300B8A92B /* CollectionView */,
+				19C0EFFD2BF7CC9500B8A92B /* Custom */,
+				19C0EFFA2BF7C7DF00B8A92B /* Support */,
 				199B80162BF3D3F000C2B756 /* Info.plist */,
 				199B800E2BF3D3EE00C2B756 /* MC05.xcdatamodeld */,
 			);
 			path = MC05;
+			sourceTree = "<group>";
+		};
+		199B802B2BF525FE00C2B756 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				199B80272BF525F800C2B756 /* Note+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		199B80302BF5448500C2B756 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				199B80322BF544B000C2B756 /* MADEAwelierPERSONALUSE-Bold.otf */,
+				199B80342BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf */,
+				199B80352BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		19C0EFF42BF7C4E300B8A92B /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				19C0EFF62BF7C55600B8A92B /* NoteCollectionViewCell.swift */,
+				19C0F0022BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift */,
+				19C0F0042BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		19C0EFFA2BF7C7DF00B8A92B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				199B80112BF3D3F000C2B756 /* Assets.xcassets */,
+				199B80302BF5448500C2B756 /* Fonts */,
+				199B80132BF3D3F000C2B756 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		19C0EFFD2BF7CC9500B8A92B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				19C0EFFB2BF7CC8D00B8A92B /* CapsuleFilterButton.swift */,
+				19C0EFFE2BF7D1C600B8A92B /* CircleFilterButton.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +195,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199B803B2BF544B000C2B756 /* MADEAwelierPERSONALUSE-Regular.otf in Resources */,
 				199B80122BF3D3F000C2B756 /* Assets.xcassets in Resources */,
+				199B80382BF544B000C2B756 /* MADEAwelierPERSONALUSE-Bold.otf in Resources */,
 				199B80152BF3D3F000C2B756 /* Base in Resources */,
+				199B803A2BF544B000C2B756 /* MADEAwelierPERSONALUSE-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +211,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				199B800A2BF3D3EE00C2B756 /* ViewController.swift in Sources */,
+				19C0F0032BFD0B0700B8A92B /* NoteCollectionViewDelegate.swift in Sources */,
+				19C0F0052BFD0B8E00B8A92B /* NoteCollectionViewDataSource.swift in Sources */,
+				19C0EFF72BF7C55600B8A92B /* NoteCollectionViewCell.swift in Sources */,
+				199B80292BF525F800C2B756 /* Note+CoreDataClass.swift in Sources */,
+				19C0EFFC2BF7CC8D00B8A92B /* CapsuleFilterButton.swift in Sources */,
 				199B80062BF3D3EE00C2B756 /* AppDelegate.swift in Sources */,
+				19191BF82BF6A52000494E0B /* NotesViewController.swift in Sources */,
 				199B80102BF3D3EE00C2B756 /* MC05.xcdatamodeld in Sources */,
 				199B80082BF3D3EE00C2B756 /* SceneDelegate.swift in Sources */,
+				19C0EFFF2BF7D1C600B8A92B /* CircleFilterButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

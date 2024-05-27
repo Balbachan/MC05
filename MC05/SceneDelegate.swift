@@ -15,10 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let navigation = UINavigationController(rootViewController: ViewController())
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds) // Faz a janela ter o espaço da tela inteira
+        
         window?.windowScene = windowScene
-//        window?.rootViewController = MainTabBarControllerViewController() // Isso aqui é a aquela setinha
+        window?.rootViewController = navigation // Isso aqui é a aquela setinha
         window?.makeKeyAndVisible()
     }
 
